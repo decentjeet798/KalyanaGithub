@@ -59,6 +59,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "14921125006-j52etl42ujtdql0a544dhqh78p0bsqql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ranjeet.kalyana",
+            "certificate_hash": "d4eca0ee57611b7847494a0121214cfc4945b21f"
+          }
+        },
+        {
           "client_id": "14921125006-aot0skf5s4tcht40cl6gb2v265b0jojr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

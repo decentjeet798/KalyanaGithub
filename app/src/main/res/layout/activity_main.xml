@@ -16,7 +16,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:fontFamily="serif"
-            android:textStyle="bold"
+            android:textStyle="bold|italic"
             android:text="Kalyana Vaibahavam"
             android:textColor="@color/black"
             android:textSize="25sp"/>

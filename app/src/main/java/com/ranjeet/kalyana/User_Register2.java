@@ -2,7 +2,9 @@ package com.ranjeet.kalyana;
 
 import android.app.Activity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,11 +23,11 @@ public class User_Register2 extends Activity {
         setContentView(R.layout.activity_user__register2);
         textView1= (TextView) findViewById(R.id.name);
         textView2= (TextView) findViewById(R.id.last);
-        Bundle bundle=getIntent().getExtras();
-        String name=bundle.getString("Name");
-        String last=bundle.getString("Last");
-        textView1.setText(name);
-        textView2.setText(last);
+       // Bundle bundle=getIntent().getExtras();
+       // String name=bundle.getString("Name");
+        ///String last=bundle.getString("Last");
+       /// textView1.setText(name);
+        //textView2.setText(last);
         addListenerOnButton();
 
     }
@@ -35,8 +37,7 @@ public class User_Register2 extends Activity {
 
         button1 = (Button) findViewById(R.id.button_continue);
 
-        button1.setOnClickListener(
-                new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -47,6 +48,26 @@ public class User_Register2 extends Activity {
             }
 
         });
+
+    }
+    @Override
+    public void onBackPressed() {
+
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.ic_action_alert)
+                .setTitle("Kalyana Vaibhavam")
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+
 
     }
 
